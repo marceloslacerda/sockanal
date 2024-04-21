@@ -4,7 +4,7 @@ import os
 
 logger = logging.getLogger(__name__)
 
-PORT = os.environ.get("PORT", 7891)
+PORT = int(os.environ.get("PORT", 7891))
 HOST = os.environ.get("HOST", "localhost")
 LOGLEVEL = os.environ.get("LOGLEVEL", "DEBUG").strip().upper()
 EXAMPLE_DATE = datetime.datetime.now().isoformat()
