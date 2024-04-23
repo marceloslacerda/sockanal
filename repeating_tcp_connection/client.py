@@ -31,7 +31,7 @@ def main():
                 try:
                     sock.connect((host, common.PORT))
                 except ConnectionRefusedError:
-                    logging.error("Connection refused")
+                    logging.error(f"Connection to {host} on {common.PORT} refused")
                     return
                 logging.info(f"Connected to the server {host} on {common.PORT}")
                 client_loop(sock, host)
